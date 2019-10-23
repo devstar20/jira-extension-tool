@@ -1,0 +1,198 @@
+body {
+    margin: 10px;
+  }
+
+  h1 {
+    font-size: 15px;
+  }
+
+  /*.container {
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    max-height: 548px;
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  .container>* {
+    margin: 10px 0;
+  }
+
+  .container>*:first-child {
+    margin-top: 0px;
+  }
+
+  .container.container--hidden {
+    display: none;
+  }*/
+
+  input[type="text"]:not(.browser-default):focus:not([readonly]),
+  input[type="email"]:not(.browser-default):focus:not([readonly]),
+  input[type="password"]:not(.browser-default):focus:not([readonly]),
+  input[type="date"]:not(.browser-default):focus:not([readonly]),
+  textarea.material-textarea:focus:not([readonly])
+  {
+      border-color:  #ec407a;
+      border-bottom: 1px solid #ec407a !important;
+      box-shadow: none !important;
+  }
+
+  .worklog-items-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+  }
+
+  .worklog-items-table td {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 5px 5px;
+    border-style: solid;
+    border-width: 1px;
+    overflow: hidden;
+    word-break: normal;
+  }
+
+  .worklog-items-table th {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 5px;
+    border-style: solid;
+    border-width: 1px;
+    overflow: hidden;
+    word-break: normal;
+  }
+
+  .worklog-items-table .table-line {
+    vertical-align: top
+  }
+
+  .worklog-items-table .jira-number-column-item {
+    max-width: 70px;
+  }
+
+  .worklog-items-table .time-spent-column-item {
+    max-width: 90px;
+  }
+
+  .worklog-items-table .comment-column-item {
+    min-width: 300px;
+    max-width: 500px;
+  }
+
+  .worklog-items-table input {
+    width: 100%;
+    font-size: 12px;
+  }
+  .worklog-textarea
+  {
+    width: 100%;
+    font-size: 12px;
+    min-height: 70px;
+    font-size: 10px;
+  }
+
+  .worklog.worklog--edited {
+    background-color: #ffffd2;
+  }
+
+  .worklog.worklog--invalid {
+    background-color: #ff9b9b;
+  }
+
+  .worklog.worklog--saved {
+    background-color: #b1ffb8;
+  }
+
+  .worklog.worklog--deleted {
+    background-color: #ff9b9b;
+  }
+
+  .worklog input.input--invalid{
+    border-color: #ff2323;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  #loading {
+    position: fixed;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.28);
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  #loading img {
+    margin: 200px auto;
+    display: block;
+  }
+
+
+  .delete-button{
+    display: inline-block;
+    margin: auto;
+    width: 20px;
+    border: 1px solid #ddd;
+    border-bottom: 1px solid #aaa;
+    border-right: 1px solid #aaa;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 14px;
+    height: 19px;
+    line-height: 1.5em;
+    background-image: url(/img/ic_delete_black_24dp.png);
+  }
+
+  .open-link-button{
+    display: inline-block;
+    margin: auto;
+    width: 20px;
+    border: 1px solid #ddd;
+    border-bottom: 1px solid #aaa;
+    border-right: 1px solid #aaa;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 14px;
+    height: 19px;
+    line-height: 1.5em;
+    background-image: url(/img/open_in_new_window.png);
+    background-size: cover;
+    background-color:transparent;
+    border:0px;
+  }
+
+  .link-disabled {
+    pointer-events: none;
+  }
+
+  .save-button {
+    margin: 10px 0;
+    width: 70px;
+    height: 50px;
+    border: 1px solid #ddd;
+    border-bottom: 1px solid #aaa;
+    border-right: 1px solid #aaa;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-size: 14px;
+    line-height: 1.5em;
+    background-image: url(/img/ic_cloud_upload_black_48dp.png);
+  }
+
+  .error_status {
+    padding: 20px;
+  }
+
+  .error_status h2 {
+    white-space: initial;
+    width: 400px;
+  }
