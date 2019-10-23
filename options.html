@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Jira Worklog Tool Options</title>
+</head>
+<style type="text/css">
+    /*body {
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 15px;
+    }
+    h2 {
+        font-size:40px;
+    }
+
+    [id='container'] {
+        align-items: center;
+      
+        justify-content: space-between;
+        padding: 20px;
+        max-width: 768px;
+        margin: 0 auto;
+    }
+
+    [id='container'] * {
+        align-items: center;
+        justify-content: space-between;
+        margin: 5px;
+        margin-top: 10px;
+    }*/
+   
+
+    .mt-80{
+        margin-top: 80px;
+    }
+    .p-centre{
+        padding: 30px 200px;
+    }
+
+    .step{
+        padding:10px;
+        margin-top:20px;
+    }
+
+    form button, form h5{
+        margin:10px 0;
+    }
+    input[type="text"]:not(.browser-default):focus:not([readonly]),
+    input[type="email"]:not(.browser-default):focus:not([readonly]),
+    input[type="password"]:not(.browser-default):focus:not([readonly]),
+    textarea.material-textarea:focus:not([readonly])
+    {
+        border-color:  #ec407a;
+        border-bottom: 1px solid #ec407a !important;
+        box-shadow: none !important;
+    }
+
+
+</style>
+
+<body>
+    <div class="container">
+            <div class="row">
+            <div class="col m8 offset-m2 mt-80">
+                <div style="text-align: center;">
+                    <img src="img/jira-clock-icon.png" style="width:100px" />
+                </div>
+                <div class="step">
+                    <h5 style="color:  #ec407a"> Configure Jira Connection</h5>
+                    <div class="input-field">
+                        <label htmlFor="jiraUrl">Jira Hostname</label>
+                        <input type="text" id="jiraUrl" />
+                    </div>
+                    <button id="testConnection" class="btn waves-effect waves-light">Test Connection</button>
+                </div>
+                <div class="step">
+                    <h5 style="color:  #ec407a">Basic Authentication*</h5>
+                    <p>*You probably don't need it. Only fill it if the Jira API URL is different from the Jira Website you use, or if connection doesn't work even after logging in on Jira through Chrome.</p>
+                    <div class="input-field">
+                        <label htmlFor="user">User Name</label>
+                        <input type="text" id="user" />
+                    </div>
+                    <div class="input-field">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" />
+                    </div>
+                </div>
+                <div class="step" style="display:none">
+                   <h5 style="color:  #ec407a">App Token*</h5>
+                    <p>*Fill only if required by your Jira API. Ask your IT department for assistance.</p>
+                    <div class="input-field">
+                        <label htmlFor="token">Token</label>
+                        <input type="text" id="token" />
+                    </div> 
+
+                   
+                </div>
+                <div class="step">
+                    <div id="status"></div>
+                    <button id="save" class="btn waves-effect waves-light">Save</button>
+                </div>
+            </div>
+          </div>
+        </div>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+  
+    <script src="lib/axios.min.js" defer></script>
+    <script src="js/jira-helper.js"></script>
+    <script src="js/options.js"></script>
+    <script src="js/materialize.min.js"></script>
+</body>
+
+</html>
