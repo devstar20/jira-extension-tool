@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Jira Worklog Tool",
+  "version": "0.4.0",
+  "author": "alfeugds",
+  "description": "This extension allows the user to log the work in Jira easily.",
+  "homepage_url": "https://github.com/alfeugds/jiraworklogtool",
+  "icons": {
+    "128": "img/jira-clock-icon-small.png"
+  },
+  "options_page": "options.html",
+  "browser_action": {
+    "default_icon": "img/jira-clock-icon-small.png",
+    "default_popup": "temp-popup.html",
+    "default_title": "Log Work"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "cookies",
+    "<all_urls>"
+  ],
+  "content_security_policy": "script-src 'self' https://www.google-analytics.com https://www.googletagmanager.com; object-src 'self'"
+}

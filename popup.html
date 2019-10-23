@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Jira Worklog Helper</title>
+
+  <!-- Google Tag Manager -->
+  <script src="js/gtm-head.js"></script>
+  <script src="js/gtm-tags.js"></script>
+  <!-- End Google Tag Manager -->
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+    -->
+  <script src="lib/mediator.min.js" defer></script>
+  <script src="lib/axios.min.js" defer></script>
+  <script src="js/jira-helper.js"></script>
+  <script src="js/jira-parser.js"></script>
+  <script src="js/model.js"></script>
+  <script src="js/view.js"></script>
+  <script src="js/controller.js"></script>
+  <script src="js/update-script.js"></script>
+  <script src="js/popup.js"></script>
+  <script src="js/materialize.min.js"></script></script>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MZ6T8MS"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <div id="container" class="container">
+      <div class="col m12" style="text-align: center; padding-top:55px">
+        <img src="img/jira-clock-icon.png" style="width:100px"/>
+        <h4 style="color:#ec407a">Jira Worklog Tool</h4>
+      </div>
+      <div class="col m12" style="display:flex; justify-content: space-between;">
+          <div class="col m8">
+          <span style="color:#ec407a; font-size:16px">Worklog Date:</span>
+          <input type="date" id="worklogDate" class="worklog-date-input"/>
+        </div>
+        <div class="col m4" style="display: flex; align-items: center;">
+          <button id="getWorklogButton" class="get-worklog-date-button btn waves-effect waves-light"><span style="font: size 12px;">Generate Report</span></button>
+        </div>
+          
+      </div>
+    <table class="worklog-items-table"id="worklog-items">
+        <thead>
+          <tr>
+            <th class="table-line jira-number-column-item">Task Name</th>
+            <th class="table-line time-spent-column-item">Time Spent</th>
+            <th class="table-line comment-column-item">Comment</th>
+            <th class="table-line action-column-item">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      </table>
+      <h2 class="total-hours-label" style="display: none;">Total: <span id="totalHours">2h</span></h2>
+      <!--<button id="save" class="save-button" aria-label="Save All"></button>-->
+      <br/>
+      <h6 style="color:#ec407a" >General Report Result:</h6>
+      <br/>
+      <textarea class="worklog-textarea" id="worklog" style="height:250px; font-size:14px"></textarea>
+      <br>
+      <!--<button id="addWorklogs" class="add-worklogs-button">Add Worklogs</button>-->
+      <br />
+      <div id="status" class="hidden"></div>
+    </div>
+    <div class="error_status hidden">
+      <h4 class="error-status-label">Please go to <a target="_blank" href="options.html" class="error-options-link">Options</a> and make sure you are logged in Jira, and the Jira Hostname is correct.</h4>
+    </div>
+    <div id="loading" class="hidden">
+      <img class="hidden" style="width:70px" src="img/spinner-small.gif" aria-hidden="true" />
+    </div>
+  </div>  
+  </body>
+</html>
